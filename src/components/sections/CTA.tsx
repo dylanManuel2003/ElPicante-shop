@@ -1,35 +1,36 @@
+import Link from "next/link";
 import React from "react";
 
 const Cta = () => {
     return (
         <>
-            <section className="flex items-center justify-center h-[40vh] bg-[#510C6E] dark:bg-dark">
-                <div className="container mx-auto">
+            <section className="flex items-center justify-center h-[40vh]">
+                <div className="w-[90%] mx-auto">
                     <div className="relative z-10 overflow-hidden rounded bg-primary py-12 px-8 md:p-[70px]">
                         <div className="flex flex-wrap items-center -mx-4">
                             <div className="w-full px-4 lg:w-1/2">
                                 <span className="block mb-4 text-base font-medium text-white">
-                                    Find Your Next Dream App
+                                    Encuentra tu estilo ideal
                                 </span>
                                 <h2 className="mb-6 text-3xl font-bold leading-tight text-white sm:mb-8 sm:text-[40px]/[48px] lg:mb-0">
-                                    <span className="xs:block"> Get started with </span>
-                                    <span>our free trial</span>
+                                    <span className="xs:block">Quieres descubrir nuestras promos? </span>
+                                    <span>Hablemos ahora</span>
                                 </h2>
                             </div>
                             <div className="w-full px-4 lg:w-1/2">
                                 <div className="flex flex-wrap lg:justify-end">
-                                    <a
-                                        href="javascript:void(0)"
+                                    <Link
+                                        href="https://walink.co/1e4a28"
                                         className="inline-flex py-3 my-1 mr-4 text-base font-medium transition bg-white rounded-md hover:bg-shadow-1 text-primary px-7"
                                     >
-                                        Get Pro Version
-                                    </a>
-                                    <a
-                                        href="javascript:void(0)"
+                                        Charlar
+                                    </Link>
+                                    <Link
+                                        href="/products"
                                         className="inline-flex py-3 my-1 text-base font-medium text-white transition rounded-md bg-secondary px-7 hover:bg-opacity-90"
                                     >
-                                        Start Free Trial
-                                    </a>
+                                        Ver productos
+                                    </Link>
                                 </div>
                             </div>
                         </div>
