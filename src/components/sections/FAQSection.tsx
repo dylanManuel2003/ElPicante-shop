@@ -6,8 +6,8 @@ const FAQItem = ({ question, answer }: { question: string, answer: string }) => 
 
     return (
         <div className="border-b border-gray-200 py-4">
-            <button 
-                onClick={() => setIsOpen(!isOpen)} 
+            <button
+                onClick={() => setIsOpen(!isOpen)}
                 className="w-full flex justify-between items-center text-left text-xl font-medium text-black dark:text-white">
                 {question}
                 <span className={`transform transition-transform ${isOpen ? 'rotate-180' : ''}`}>
@@ -42,7 +42,7 @@ const FAQSection = () => {
     ];
 
     return (
-        <section className="w-[90%] mx-auto h-[90vh] text-black dark:text-white flex flex-col items-start justify-center ">
+        <section className="w-[90%] mx-auto h-[70vh] text-black dark:text-white flex flex-col items-start justify-center ">
             <h2 className="text-3xl font-bold text-center mb-12">Preguntas Frecuentes</h2>
             <div className="w-full">
                 {faqData.map((item, index) => (

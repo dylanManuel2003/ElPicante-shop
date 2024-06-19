@@ -2,7 +2,7 @@ import Image from "next/image"
 
 const CardProduct = ({ imageUrl, name, description, price }: { imageUrl: string, name: string, description: string, price: string }) => {
   return (
-    <div className="mx-auto lg:mx-0 min-w-80 lg:transform overflow-hidden rounded-lg bg-white dark:bg-black shadow-md duration-300 lg:hover:scale-105 hover:shadow-lg">
+    <div className="mx-auto lg:mx-0 min-w-80 lg:transform overflow-hidden rounded-lg bg-light-secondary dark:bg-dark-secondary shadow-md duration-300 lg:hover:scale-105 hover:shadow-lg">
       <img
         src={imageUrl}
         className="h-48 w-full object-cover object-center"
@@ -41,37 +41,37 @@ const Products = () => {
     name: "Product 1",
     price: "20.00",
     description: "product descriptioon efnowenfed",
-  },{
+  }, {
     id: 2,
     imageUrl: "https://images.unsplash.com/photo-1674296115670-8f0e92b1fddb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
     name: "Product 2",
     price: "51.50",
     description: "product descriptioon efnowenfed",
-  },{
+  }, {
     id: 3,
     imageUrl: "https://images.unsplash.com/photo-1674296115670-8f0e92b1fddb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
     name: "Product 3",
     price: "36.20",
     description: "product descriptioon efnowenfed",
-  },{
+  }, {
     id: 4,
     imageUrl: "https://images.unsplash.com/photo-1674296115670-8f0e92b1fddb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
     name: "Product 4",
     price: "84.00",
     description: "product descriptioon efnowenfed",
   },]
- 
+
 
 
   return (
-    <section className="h-[80vh] w-[90%] mx-auto flex flex-col items-start justify-center overflow-hidden">
+    <section className="h-[70vh] w-[90%] mx-auto flex flex-col items-start justify-center overflow-hidden">
       <h3 className="text-[24px] font-bold mb-12 text-left ">Productos destacados</h3>
-      <div className="overflow-x-auto lg:overflow-hidden w-full flex items-center justify-between gap-8">
+      <div className="overflow-x-auto xl:overflow-hidden w-full flex items-center justify-between gap-8">
         {data.map((product) => (
           <CardProduct
             key={product.id}
             imageUrl={product.imageUrl}
-            name={product.name} 
+            name={product.name}
             description={product.description}
             price={product.price} />
         ))}
