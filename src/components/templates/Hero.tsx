@@ -10,7 +10,7 @@ const Hero = () => {
                     <h2 className="text-shadow-sm text-[#ededed] text-[60px] mb-4 text-center lg:text-left font-bold drop-shadow-black drop-shadow-2xl">Que bueno verte,<br /> buscas algo en especifico?</h2>
                     <div className="flex flex-col gap-4 md:flex-row">
                         <Link href="" className="w-72 py-4 rounded-lg flex items-center justify-center font-semibold shadow-lg bg-primary text-white hover:bg-[#6d268b] duration-150 ease-in-out hover:shadow-xl">Ver promos</Link>
-                        <Link href="" className="mt-4 md:mt-0 w-72 py-4 rounded-lg flex items-center justify-center font-semibold shadow-lg bg-black text-white hover:bg-[#111] duration-150 ease-in-out hover:shadow-xl ">Productos nuevos</Link>
+                        <Link href="/products" className="mt-4 md:mt-0 w-72 py-4 rounded-lg flex items-center justify-center font-semibold shadow-lg bg-black text-white hover:bg-[#111] duration-150 ease-in-out hover:shadow-xl ">Productos nuevos</Link>
                     </div>
                 </div>
             </div>

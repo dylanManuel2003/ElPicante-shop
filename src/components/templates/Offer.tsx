@@ -43,7 +43,7 @@ const CardTopicOffer = () => {
   )
 }
 
-const ImageCard = ({ href, src, alt, category, className }) => {
+const ImageCard = ({ href, src, alt, category, className }: { href: string, src: string, alt: string, category: string, className: string }) => {
     return (
       <Link href={href} className={`${className} relative block overflow-hidden rounded-xl max-h-[18rem] group `}>
           <img
