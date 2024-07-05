@@ -3,9 +3,10 @@ import useToggleMenu from '@/hooks/useToggleMenu'
 import { useTheme } from 'next-themes'
 import { Moon, Sun } from '../svg'
 
-const Navbar = ({ isFixed = false }: { isFixed: boolean | null }) => {
+const Navbar = ({ isFixed = false, x }: { isFixed: boolean | null, x: any }) => {
     const { theme, setTheme } = useTheme()
     const { isOpen, toggleDropdown, ref } = useToggleMenu();
+    console.log('products: ', x);
 
     return (
         <nav ref={ref} className={`${isFixed ? 'fixed left-0 top-0' : ''} z-50 w-full h-[80px] px-4 sm:px-16 flex justify-center items-center bg-light-secondary dark:bg-dark-secondary shadow-lg `}>
