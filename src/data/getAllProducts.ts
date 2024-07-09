@@ -16,6 +16,17 @@ export const getAllProducts = async () => {
               id
               name
               price
+              media {
+                ... on Asset {
+                  id
+                  src
+                }
+              }
+              description {
+                json
+              }
+              slug
+              category
             }
           }
         }
