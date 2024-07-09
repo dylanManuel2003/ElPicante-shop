@@ -25,25 +25,25 @@ const FAQSection = () => {
     const faqData = [
         {
             question: '¿Cómo puedo hacer un pedido?',
-            answer: 'Para hacer un pedido, simplemente navegue a la página de productos, agregue los productos que desea a su carrito y proceda a la compra.',
+            answer: 'Para hacer un pedido, simplemente navegue a la página de productos, elija el producto que desea y consulte la disponiblidad del mismo desde el boton de stock.',
         },
         {
             question: '¿Cuáles son los métodos de pago disponibles?',
-            answer: 'Aceptamos varios métodos de pago, incluidos tarjeta de crédito, PayPal y transferencias bancarias.',
+            answer: 'De momento solo tenemos dispoble transferencias bancarias, efectivo y links de mercado pago.',
         },
         {
             question: '¿Puedo rastrear mi pedido?',
-            answer: 'Sí, puede rastrear su pedido utilizando el número de seguimiento proporcionado en el correo de confirmación del envío.',
+            answer: 'Actualemente no tenemos esta función disponible en nuestra web pero puede hacer cualquier consulta sobre su compra vía whatsapp.',
         },
         {
             question: '¿Cuál es la política de devolución?',
-            answer: 'Puede devolver los productos dentro de los 30 días posteriores a la compra. Asegúrese de que los productos estén en su estado original.',
+            answer: 'Puede devolver los productos dentro de los 15 días posteriores a la compra. Asegúrese de que los productos estén en su estado original.',
         },
     ];
 
     return (
-        <section className="w-[90%] mx-auto h-[70vh] text-black dark:text-white flex flex-col items-start justify-center ">
-            <h2 className="text-3xl font-bold text-center mb-12">Preguntas Frecuentes</h2>
+        <section className="w-[90%] mx-auto h-[70vh] text-black dark:text-white flex flex-col items-center justify-center ">
+            <h2 className="text-[30px] font-bold text-center mt-12 mb-8 font-nosifer text-gold">Preguntas Frecuentes</h2>
             <div className="w-full">
                 {faqData.map((item, index) => (
                     <FAQItem key={index} question={item.question} answer={item.answer} />

@@ -1,16 +1,14 @@
 import type { Metadata } from "next";
 import Head from "next/head";
-import { Gabarito } from "next/font/google";
+import { gabarito, nosifer } from "@/app/utils/fonts"
 import { ThemeProvider } from "@/components/providers/ThemeProvider";
 import "./globals.css";
 
-const gabarito = Gabarito({ subsets: ["latin"] });
-
 export const metadata: Metadata = {
-  title: "Galactic Clothes Shop",
+  title: "ElPicante Clothes Shop",
   description: "Clothes Ecommerce",
   icons: {
-    icon: "/images/logo.png",
+    icon: "/images/icon.png",
   },
 };
 
@@ -21,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
-      <body className={gabarito.className}>
+      <body className={` ${gabarito} ${nosifer} `}>
         <ThemeProvider attribute="class" enableSystem={false}>
           {children}
         </ThemeProvider>

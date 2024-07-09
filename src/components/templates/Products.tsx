@@ -1,79 +1,30 @@
-import Image from "next/image"
+import CardProductLanding from "@/components/molecules/CardProductLanding"
 
-const CardProduct = ({ imageUrl, name, description, price }: { imageUrl: string, name: string, description: string, price: string }) => {
-  return (
-    <div className="mx-auto lg:mx-0 min-w-80 lg:transform overflow-hidden rounded-lg bg-light-secondary dark:bg-dark-secondary shadow-md duration-300 lg:hover:scale-105 hover:shadow-lg">
-      <img
-        src={imageUrl}
-        className="h-48 w-full object-cover object-center"
-        width={320}
-        height={190}
-        alt="Product Image"
-      />
-      <div className="p-4">
-        <h2 className="mb-2 text-lg font-medium dark:text-white text-gray-900">
-          {name}
-        </h2>
-        <p className="mb-2 text-base dark:text-gray-300 text-gray-700">
-          {description}
-        </p>
-        <div className="flex items-center">
-          <p className="mr-2 text-lg font-semibold text-gray-900 dark:text-white">
-            ${price}
-          </p>
-          <p className="text-base  font-medium text-gray-500 line-through dark:text-gray-300">
-            $25.00
-          </p>
-          <p className="ml-auto text-base font-medium text-green-500">
-            20% off
-          </p>
-        </div>
-      </div>
-    </div>
-  )
+interface ProductProps {
+  node: {
+    id: string,
+    name: string,
+    description: { json: { content: [{ content: { text: string } }] } },
+    slug: string,
+    price: string,
+    media: [{ src: string }],
+  }
 }
 
-const Products = () => {
-
-  const data = [{
-    id: 1,
-    imageUrl: "https://images.unsplash.com/photo-1674296115670-8f0e92b1fddb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
-    name: "Product 1",
-    price: "20.00",
-    description: "product descriptioon efnowenfed",
-  }, {
-    id: 2,
-    imageUrl: "https://images.unsplash.com/photo-1674296115670-8f0e92b1fddb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
-    name: "Product 2",
-    price: "51.50",
-    description: "product descriptioon efnowenfed",
-  }, {
-    id: 3,
-    imageUrl: "https://images.unsplash.com/photo-1674296115670-8f0e92b1fddb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
-    name: "Product 3",
-    price: "36.20",
-    description: "product descriptioon efnowenfed",
-  }, {
-    id: 4,
-    imageUrl: "https://images.unsplash.com/photo-1674296115670-8f0e92b1fddb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
-    name: "Product 4",
-    price: "84.00",
-    description: "product descriptioon efnowenfed",
-  },]
-
-
-
+const Products = ({ products }: { products: any }) => {
   return (
-    <section className="h-[70vh] w-[90%] mx-auto flex flex-col items-start justify-center overflow-hidden">
-      <h3 className="text-[24px] font-bold mb-12 text-left ">Productos destacados</h3>
-      <div className="overflow-x-auto xl:overflow-hidden w-full flex items-center justify-between gap-8">
-        {data.map((product) => (
-          <CardProduct
-            key={product.id}
-            imageUrl={product.imageUrl}
-            name={product.name}
-            description={product.description}
-            price={product.price} />
+    <section id="offers" className="h-[70vh] w-[90%] mx-auto flex flex-col items-center justify-center overflow-hidden">
+      <h3 className="text-[30px] font-bold mt-12 mb-8 text-left font-nosifer text-gold">Productos destacados</h3>
+      <div className="overflow-x-auto xl:overflow-hidden w-full lg:h-auto flex items-center justify-between gap-8">
+        {products.map((product: ProductProps) => (
+          <CardProductLanding
+            key={product.node.id}
+            imageUrl={product.node.media[0].src}
+            name={product.node.name}
+            description={product.node.description.json.content[0].content.text}
+            price={product.node.price}
+            slug={product.node.slug}
+          />
         ))}
       </div>
     </section>
