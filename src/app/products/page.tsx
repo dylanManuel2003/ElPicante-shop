@@ -18,9 +18,8 @@ interface ProductProps {
 
 export default async function Page() {
     const products: any = await getAllProducts()
-    console.log(products.data[0]);
 
-
+    if (!products) return null
     return (
         <section className="min-h-screen w-full bg-white dark:bg-dark">
             <Navbar isFixed={false} />

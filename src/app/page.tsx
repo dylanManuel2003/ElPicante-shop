@@ -9,7 +9,7 @@ export default async function Home() {
       <Navbar isFixed />
       <Hero />
       <Offer />
-      <Products products={products.data} />
+      <Products />
       <FAQSection />
       <CTA />
       <Footer />

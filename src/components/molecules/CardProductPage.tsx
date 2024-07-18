@@ -17,7 +17,7 @@ const CardProductPage = ({
   const url = `https://wa.me/${phoneNumber}/?text=${encodedMessage}`;
 
   return (
-    <div className="flex flex-col items-center justify-center w-full max-w-lg mx-auto bg-dark-secondary rounded-md">
+    <div className="flex flex-col items-center justify-between w-full max-w-lg mx-auto bg-dark-secondary rounded-md">
       <img
         className="object-cover w-full rounded-md h-72 xl:h-80"
         src={imageUrl}
